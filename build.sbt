@@ -2,9 +2,11 @@ name := "scorer"
 
 version := "1.0"
 
-scalaVersion := "2.10.2"
+scalaVersion := "2.12.5"
 
-libraryDependencies += "org.scalatest" %% "scalatest" % "1.9.1" % "test"
-
-libraryDependencies += "org.scalamock" %% "scalamock-scalatest-support" % "3.0.1" % "test"
-
+libraryDependencies ++= Seq(
+  "com.typesafe.akka" %% "akka-actor" % "2.5.23",
+  "io.spray" %% "spray-json" % "1.3.5",
+  "com.typesafe.akka" %% "akka-testkit" % "2.5.23" % Test,
+  "org.scalatest" %% "scalatest" % "3.0.8" % Test
+)
